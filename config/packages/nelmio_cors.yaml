@@ -30,4 +30,3 @@ nelmio_cors:
 #             allow_headers: ['Content-Type', 'Authorization']
 #             allow_methods: ['GET', 'POST', 'PUT', 'DELETE']
 #             max_age: 3600
-/Users/gansa/Sites/symfony/nicepet_api/.gitignore
