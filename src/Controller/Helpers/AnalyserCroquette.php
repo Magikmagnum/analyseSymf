@@ -492,6 +492,63 @@ class AnalyserCroquette
     }
 
 
+
+
+    /**
+     * Undocumented function
+     * 
+     * 
+     * @param array $list_croquette
+     * @return int
+     */
+    private function classeur(array $list_croquette) : int
+    {
+        if ($list_croquette['analyse_quantitatif_nutriment']['proteine'] == true && $list_croquette['analyse_quantitatif_nutriment']['lipide'] == true && $list_croquette['analyse_quantitatif_nutriment']['ENA'] == true) {
+            //$filter['tres_bon'][] = $list_croquette;
+            return 1;
+        }
+
+
+        if ($list_croquette['analyse_quantitatif_nutriment']['proteine'] == true && $list_croquette['analyse_quantitatif_nutriment']['lipide'] == true && $list_croquette['analyse_quantitatif_nutriment']['ENA'] == false) {
+            //$filter['assez_bon'][] = $list_croquette;
+            return 2;
+        }
+
+        if ($list_croquette['analyse_quantitatif_nutriment']['proteine'] == true && $list_croquette['analyse_quantitatif_nutriment']['lipide'] == false && $list_croquette['analyse_quantitatif_nutriment']['ENA'] == true) {
+            // $filter['assez_bon'][] = $list_croquette;
+            return 2;
+        }
+
+
+
+        if ($list_croquette['analyse_quantitatif_nutriment']['proteine'] == true && $list_croquette['analyse_quantitatif_nutriment']['lipide'] == false && $list_croquette['analyse_quantitatif_nutriment']['ENA'] == false) {
+            // $filter['bon'][] = $list_croquette;
+            return 3;
+        }
+
+
+        if ($list_croquette['analyse_quantitatif_nutriment']['proteine'] == false && $list_croquette['analyse_quantitatif_nutriment']['lipide'] == true && $list_croquette['analyse_quantitatif_nutriment']['ENA'] == true) {
+            // $filter['mauvais'][] = $list_croquette;
+            return 4;
+        }
+
+        if ($list_croquette['analyse_quantitatif_nutriment']['proteine'] == false && $list_croquette['analyse_quantitatif_nutriment']['lipide'] == false && $list_croquette['analyse_quantitatif_nutriment']['ENA'] == true) {
+            // $filter['mauvais'][] = $list_croquette;
+            return 4;
+        }
+
+        if ($list_croquette['analyse_quantitatif_nutriment']['proteine'] == false && $list_croquette['analyse_quantitatif_nutriment']['lipide'] == true && $list_croquette['analyse_quantitatif_nutriment']['ENA'] == false) {
+            // $filter['mauvais'][] = $list_croquette;
+            return 4;
+        }
+
+        if ($list_croquette['analyse_quantitatif_nutriment']['proteine'] == false && $list_croquette['analyse_quantitatif_nutriment']['lipide'] == false && $list_croquette['analyse_quantitatif_nutriment']['ENA'] == false) {
+            // $filter['mauvais'][] = $list_croquette;
+            return 4;
+        }
+    }
+
+
     // private function tauxDIgestibilite()
     // {
     //     $this->tauxDigestibilite = ($this->alimentEntrant - $this->excrement) / $this->alimentEntrant;
