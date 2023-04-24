@@ -2,17 +2,8 @@
 
 namespace App\Controller;
 
-// use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use App\Entity\Brand;
-use App\Entity\Produit;
-use App\Entity\Category;
-use App\Entity\Characteristic;
 use App\Repository\ProduitRepository;
-use App\Repository\BrandRepository;
 use App\Controller\AbstractController;
-use Doctrine\ORM\EntityManagerInterface;
-use App\Controller\Helpers\AnalyserCroquette;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;

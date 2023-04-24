@@ -4,7 +4,7 @@ namespace App\Controller;
 
 
 use App\Repository\ProduitRepository;
-use App\Controller\Helpers\AnalyserCroquette;
+use App\Controller\Helpers\Analyser\AnalyserCroquette;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
